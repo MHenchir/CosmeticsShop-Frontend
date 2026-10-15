@@ -1,0 +1,54 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 72px;
+  background: #faf7f1;
+  border-bottom: 1px solid #e7dfd2;
+  font-family: 'Manrope', sans-serif;
+}
+
+.logo {
+  font-family: 'Fraunces', serif;
+  font-size: 26px;
+  font-weight: 600;
+  color: #2b2620;
+  text-decoration: none;
+}
+
+.nav a {
+  color: #2b2620;
+  text-decoration: none;
+  margin: 0 16px;
+  font-weight: 500;
+
+  &:hover,
+  &.active {
+    color: #a8543a;
+  }
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.status {
+  font-size: 13px;
+  color: #6b6358;
+}
+
+.login-link,
+button {
+  background: #a8543a;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+}

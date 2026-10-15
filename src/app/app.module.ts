@@ -10,8 +10,10 @@ import { LoginComponent } from './features/auth/login/login.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
+import { HeaderComponent } from './shared/header/header.component';
+import { HomeComponent } from './features/home/home.component';
 @NgModule({
-  declarations: [AppComponent, LoginComponent],
+  declarations: [AppComponent, LoginComponent, HeaderComponent, HomeComponent],
   imports: [ BrowserModule,
   BrowserAnimationsModule,
   AppRoutingModule,
