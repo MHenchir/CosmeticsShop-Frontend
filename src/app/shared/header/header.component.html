@@ -1,0 +1,18 @@
+<header class="header">
+  <a routerLink="/" class="logo">Lumea</a>
+
+  <nav class="nav">
+    <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Accueil</a>
+  </nav>
+
+  <div class="actions">
+    <ng-container *ngIf="isLoggedIn$ | async; else guest">
+      <span class="status">Connecté</span>
+      <button type="button" (click)="logout()">Déconnexion</button>
+    </ng-container>
+
+    <ng-template #guest>
+      <a routerLink="/login" class="login-link">Se connecter</a>
+    </ng-template>
+  </div>
+</header>
