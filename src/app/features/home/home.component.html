@@ -1,4 +1,31 @@
-<section class="home">
+<section class="hero">
   <h1>Des rituels de soin, pensés pour votre peau</h1>
-  <p>Les produits arrivent à la prochaine étape.</p>
+  <p>Des formules propres, pour une routine simple qui tient ses promesses.</p>
+</section>
+
+<section class="catalog">
+  <h2>Nos produits</h2>
+
+  <ng-container *ngIf="products$ | async as products; else loading">
+    <p *ngIf="products.length === 0" class="empty">Aucun produit pour le moment.</p>
+
+    <div class="grid">
+      <article class="card" *ngFor="let product of products">
+        <div class="image">{{ product.name }}</div>
+        <span class="category">{{ product.categoryName }}</span>
+        <h3>{{ product.name }}</h3>
+        <p class="description">{{ product.description }}</p>
+        <div class="footer">
+          <span class="price">{{ product.price | currency: product.currency }}</span>
+          <span class="stock" [class.out]="product.stockQuantity === 0">
+            {{ product.stockQuantity > 0 ? 'En stock' : 'Rupture' }}
+          </span>
+        </div>
+      </article>
+    </div>
+  </ng-container>
+
+  <ng-template #loading>
+    <p class="empty">Chargement des produits...</p>
+  </ng-template>
 </section>
