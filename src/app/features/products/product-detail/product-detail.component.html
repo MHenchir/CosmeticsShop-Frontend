@@ -1,0 +1,19 @@
+<section class="detail">
+  <a routerLink="/" class="back">← Retour au catalogue</a>
+
+  <p *ngIf="notFound" class="message">Ce produit n'existe pas ou n'est plus disponible.</p>
+
+  <div class="layout" *ngIf="product$ | async as product">
+    <div class="image">{{ product.name }}</div>
+
+    <div class="info">
+      <span class="category">{{ product.categoryName }}</span>
+      <h1>{{ product.name }}</h1>
+      <p class="price">{{ product.price | currency: product.currency }}</p>
+      <p class="description">{{ product.description }}</p>
+      <p class="stock" [class.out]="product.stockQuantity === 0">
+        {{ product.stockQuantity > 0 ? 'En stock' : 'Rupture de stock' }}
+      </p>
+    </div>
+  </div>
+</section>

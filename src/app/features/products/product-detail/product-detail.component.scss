@@ -1,0 +1,83 @@
+.detail {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px;
+  font-family: 'Manrope', sans-serif;
+  color: #2b2620;
+}
+
+.back {
+  color: #6b6358;
+  text-decoration: none;
+  font-size: 14px;
+
+  &:hover {
+    color: #a8543a;
+  }
+}
+
+.layout {
+  display: flex;
+  gap: 64px;
+  margin-top: 32px;
+}
+
+.image {
+  flex: 0 0 480px;
+  height: 480px;
+  border-radius: 20px;
+  background: #efe6d8;
+  color: #9a9082;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding-top: 8px;
+}
+
+.category {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #a8543a;
+}
+
+h1 {
+  margin: 0;
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  line-height: 1.15;
+}
+
+.price {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.description {
+  margin: 0;
+  max-width: 460px;
+  line-height: 1.7;
+  color: #6b6358;
+}
+
+.stock {
+  margin: 0;
+  color: #6b7a5e;
+
+  &.out {
+    color: #a8543a;
+  }
+}
+
+.message {
+  margin-top: 32px;
+  color: #6b6358;
+}
