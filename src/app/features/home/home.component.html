@@ -11,9 +11,9 @@
 
     <div class="grid">
       <article class="card" *ngFor="let product of products">
-        <div class="image">{{ product.name }}</div>
+        <a [routerLink]="['/products', product.id]" class="image">{{ product.name }}</a>
         <span class="category">{{ product.categoryName }}</span>
-        <h3>{{ product.name }}</h3>
+        <h3><a [routerLink]="['/products', product.id]">{{ product.name }}</a></h3>
         <p class="description">{{ product.description }}</p>
         <div class="footer">
           <span class="price">{{ product.price | currency: product.currency }}</span>

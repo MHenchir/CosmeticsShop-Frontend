@@ -14,11 +14,12 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './features/home/home.component';
+import { ProductDetailComponent } from './features/products/product-detail/product-detail.component';
 
 registerLocaleData(localeFr);
 
 @NgModule({
-  declarations: [AppComponent, LoginComponent, HeaderComponent, HomeComponent],
+  declarations: [AppComponent, LoginComponent, HeaderComponent, HomeComponent, ProductDetailComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
